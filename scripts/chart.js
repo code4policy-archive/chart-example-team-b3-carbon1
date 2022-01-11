@@ -1,4 +1,4 @@
-function drawLineChart(idAttr){
+function drawLineChart(idAttr , dataFile){
   // code to draw line chart goes here.
 
   var margin = {top: 20, right: 50, bottom: 30, left: 50},
@@ -36,7 +36,7 @@ function drawLineChart(idAttr){
       .attr("class", "chart")
       
 
-  d3.tsv("data.tsv", function(error, data) {
+  d3.tsv(dataFile, function(error, data) {
     if (error) throw error;
 
     data.forEach(function(d) {
@@ -102,5 +102,5 @@ function drawLineChart(idAttr){
   });
 }
 
-drawLineChart("apple-stock-chart")
-drawLineChart("google-stock-chart")
+drawLineChart("apple-stock-chart" , "data.tsv")
+drawLineChart("google-stock-chart" , "data2.tsv")

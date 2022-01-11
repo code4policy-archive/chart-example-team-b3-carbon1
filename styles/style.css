@@ -3,6 +3,7 @@ body {
   font: 10px sans-serif;
 }
 
+/* Style for Apple stock */
 #apple-stock-chart .axis path,
 #apple-stock-chart .axis line {
   fill: none;
@@ -26,6 +27,34 @@ body {
 }
 
 #apple-stock-chart .focus circle {
+  fill: none;
+  stroke: steelblue;
+}
+
+/* Style for Google stock */
+#google-stock-chart .axis path,
+#google-stock-chart .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#google-stock-chart .x.axis path {
+  display: none;
+}
+
+#google-stock-chart .line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+#google-stock-chart .overlay {
+  fill: none;
+  pointer-events: all;
+}
+
+#google-stock-chart .focus circle {
   fill: none;
   stroke: steelblue;
 }

@@ -1,4 +1,4 @@
-function drawLineChart(){
+function drawLineChart(idAttr){
   // code to draw line chart goes here.
 
   var margin = {top: 20, right: 50, bottom: 30, left: 50},
@@ -28,10 +28,11 @@ function drawLineChart(){
       .x(function(d) { return x(d.date); })
       .y(function(d) { return y(d.close); });
 
-  var svg = d3.select("#apple-stock-chart").append("svg")
+  var svg = d3.select("#apple-stock-chart-container").append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+      .attr("id" , idAttr)
       .attr("class", "chart")
       
 
@@ -101,4 +102,5 @@ function drawLineChart(){
   });
 }
 
-drawLineChart()
+drawLineChart("apple-stock-chart")
+drawLineChart("google-stock-chart")
